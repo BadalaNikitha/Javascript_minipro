@@ -1,0 +1,193 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+}
+
+.page{ min-height:100vh; }
+.hidden{ display:none; }
+
+
+/* HOSPITAL TITLE */
+.hospital-title{
+  position:absolute;
+  top:40px;
+  text-align:center;
+  width:100%;
+  font-size:50px;
+  font-weight:bold;
+  color:#052d6e;
+  letter-spacing:1px;
+}
+
+
+
+/* LOGIN */
+#loginPage{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#eef2f5;
+}
+
+.login-box{
+  background:white;
+  padding:30px;
+  width:320px;
+  border-radius:10px;
+  text-align:center;
+}
+
+.login-box input,
+.login-box select{
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+}
+
+/* NAV */
+nav{
+  background:#0a6cff;
+  color:white;
+  padding:15px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* PATIENT */
+.cards{
+  display:flex;
+  gap:50px;
+  padding:50px;
+}
+
+.card{
+  background:white;
+  padding:50px;
+  width:300px;
+  gap:50px;
+  border-radius:15px;
+  box-shadow:0 0 10px #ccc;
+  font-size: 18px;
+}
+
+.form-box{
+  padding:50px;
+  gap:50px;
+}
+
+/* ADMIN */
+.admin-container{
+  padding:20px;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+th,td{
+  border:1px solid #ccc;
+  padding:10px;
+  text-align:center;
+}
+
+th{
+  background:#0a6cff;
+  color:white;
+}
+
+.edit{
+  background:orange;
+}
+
+.delete{
+  background:red;
+}
+
+button{
+  padding:8px 12px;
+  border:none;
+  border-radius:5px;
+  background:#0a6cff;
+  color:white;
+  cursor:pointer;
+}
+
+
+
+/* APPOINTMENT FORM – ENHANCED STYLE */
+.form-box{
+  max-width:500px;
+  margin:40px auto;
+  background:white;
+  padding:30px 35px;
+  border-radius:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.form-box h3{
+  text-align:center;
+  margin-bottom:25px;
+  color:#0a6cff;
+  font-size:22px;
+}
+
+.form-box form{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.form-box input,
+.form-box select{
+  padding:12px 14px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:15px;
+  outline:none;
+  transition:0.3s;
+}
+
+.form-box input:focus,
+.form-box select:focus{
+  border-color:#0a6cff;
+  box-shadow:0 0 6px rgba(10,108,255,0.4);
+}
+
+.form-box button{
+  margin-top:10px;
+  padding:12px;
+  font-size:16px;
+  border-radius:10px;
+  background:linear-gradient(135deg,#0a6cff,#3b82f6);
+}
+
+.form-box button:hover{
+  background:linear-gradient(135deg,#084fc1,#2563eb);
+}
+
+/* READONLY DOCTOR FIELD */
+.form-box input[readonly]{
+  background:#f1f5f9;
+  font-weight:bold;
+  color:#333;
+}
+
+/* SMALL ANIMATION */
+.form-box{
+  animation:slideUp 0.4s ease;
+}
+
+@keyframes slideUp{
+  from{
+    transform:translateY(20px);
+    opacity:0;
+  }
+  to{
+    transform:translateY(0);
+    opacity:1;
+  }
+}

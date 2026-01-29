@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hospital App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN PAGE -->
+<div id="loginPage" class="page">
+  <h1 class="hospital-title">CITY CARE HOSPITAL</h1>
+  <div class="login-box">
+    
+
+    <select id="role">
+      <option value="">Select Role</option>
+      <option value="patient">Patient</option>
+      <option value="admin">Admin</option>
+    </select>
+
+    <input id="username" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+    <p id="loginMsg"></p>
+  </div>
+</div>
+
+<!-- PATIENT DASHBOARD -->
+<div id="patientPage" class="page hidden">
+  <nav>
+    <h1>Patient Dashboard</h1>
+    <button onclick="logout()">Logout</button>
+  </nav>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Dr. Anjali</h3>
+      <p>Cardiologist</p>
+      <button onclick="openForm('Dr. Anjali')">Book</button>
+    </div>
+
+    <div class="card">
+      <h3>Dr. Ramesh</h3>
+      <p>Orthopedic</p>
+      <button onclick="openForm('Dr. Ramesh')">Book</button>
+    </div>
+
+     <!-- NEW DOCTOR 1 -->
+  <div class="card">
+    <h3>Dr. Priya</h3>
+    <p>Dermatologist</p>
+    <button onclick="openForm('Dr. Priya')">Book</button>
+  </div>
+
+  <!-- NEW DOCTOR 2 -->
+  <div class="card">
+    <h3>Dr. Suresh</h3>
+    <p>Neurologist</p>
+    <button onclick="openForm('Dr. Suresh')">Book</button>
+  </div>
+  </div>
+
+ 
+
+  <div class="form-box" id="formBox">
+    <h3>Appointment Form</h3>
+    <form onsubmit="saveAppointment(event)">
+      <input id="doctor" readonly>
+      <input id="patientName" placeholder="Patient Name" required>
+      <!-- <input type="date" id="appointmentDate" required> -->
+       <input type="date" id="appointmentDate" required>
+
+      <select id="time">
+        <option value="">Select Time</option>
+        <option>10:00 AM</option>
+        <option>11:00 AM</option>
+        <option>4:00 PM</option>
+        <option>5:00 PM</option>
+      </select>
+
+      <button>Book Appointment</button>
+    </form>
+  </div>
+</div>
+
+<!-- ADMIN DASHBOARD -->
+<div id="adminPage" class="page hidden">
+  <nav class="admin-nav">
+    <h1>Admin Dashboard</h1>
+    <button onclick="logout()">Logout</button>
+  </nav>
+
+  <div class="admin-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Doctor</th>
+          <th>Patient</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="appointments"></tbody>
+    </table>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
